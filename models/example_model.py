@@ -3,13 +3,13 @@ class ExampleModel:
         self.data = []
 
     def add_data(self, item):
-        """Adiciona um item à lista de dados."""
+        """Add a item to the data list."""
         self.data.append(item)
 
     def get_data(self):
-        """Retorna todos os itens na lista de dados."""
+        """Return all items in the data list."""
         return self.data
 
     def clear_data(self):
-        """Limpa todos os dados armazenados."""
+        """Clear all stored data."""
         self.data.clear()
