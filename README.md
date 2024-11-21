@@ -58,3 +58,7 @@ git commit -m 'Added a new feature'
 git push origin feature/new-feature
 ```
 5. Open a Pull Request.
+
+## 📞 Support
+
+For questions or issues, feel free to open an issue in this repository.
