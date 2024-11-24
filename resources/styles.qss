@@ -6,6 +6,26 @@ QMainWindow {
     font-size: 14px;
 }
 
+/* Tab widget style */
+QTabWidget::pane {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+QTabWidget::tab-bar {
+    border: none;
+}
+QTabBar::tab {
+    border: none;
+    border-radius: 5px;
+    background-color: #0078d4;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+QTabBar::tab:selected {
+    background-color: #005bb5;
+}
+
 /* Button style and effects */
 QPushButton {
     color: #ffffff;
@@ -28,6 +48,94 @@ QTextEdit {
     background-color: #ffffff;
     padding: 5px;
 
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Label style */
+QLabel {
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Line edit style */
+QLineEdit {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Scroll bar style */
+QScrollBar {
+    background-color: #f8f9fa;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+QScrollBar::handle {
+    background-color: #0078d4;
+    border: none;
+    border-radius: 5px;
+}
+QScrollBar::handle:hover {
+    background-color: #005bb5;
+}
+
+/* Tab widget style */
+QTabWidget {
+    background-color: #f8f9fa;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QComboBox {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #007bff; /* Add border to dropdown */
+    background-color: #ffffff; /* Set lighter background for visibility */
+    selection-background-color: #cce5ff; /* Light blue selection */
+    color: #333333; /* Ensure text color contrast */
+}
+
+QSpinBox {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QScrollArea {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QFrame {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
     color: #333333;
     font-family: Arial, sans-serif;
     font-size: 14px;
