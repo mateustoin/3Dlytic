@@ -36,7 +36,7 @@
              <x>0</x>
              <y>0</y>
              <width>705</width>
-             <height>409</height>
+             <height>438</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -49,19 +49,6 @@
                <enum>QFrame::Shadow::Raised</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_2">
-               <item row="7" column="3">
-                <widget class="QTextEdit" name="textEdit_7">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
                <item row="7" column="0">
                 <widget class="QLabel" name="label_10">
                  <property name="maximumSize">
@@ -76,7 +63,7 @@
                 </widget>
                </item>
                <item row="1" column="3">
-                <widget class="QTextEdit" name="textEdit_3">
+                <widget class="QTextEdit" name="p_parameters_filament_price_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -94,7 +81,7 @@
                   </size>
                  </property>
                  <property name="text">
-                  <string>Filament Price:</string>
+                  <string>Filament Price (per Kg):</string>
                  </property>
                 </widget>
                </item>
@@ -106,17 +93,7 @@
                 </widget>
                </item>
                <item row="7" column="1">
-                <widget class="QTextEdit" name="textEdit_6">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QTextEdit" name="textEdit_2">
+                <widget class="QTextEdit" name="p_parameters_avrFailRate_profile_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -126,7 +103,7 @@
                 </widget>
                </item>
                <item row="6" column="1">
-                <widget class="QTextEdit" name="textEdit_4">
+                <widget class="QTextEdit" name="p_parameters_pricePerKwh_profile_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -145,19 +122,6 @@
                  </property>
                  <property name="text">
                   <string>3D Printer Consumption (W): </string>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="2">
-                <widget class="QLabel" name="label_12">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Hourly depreciation:</string>
                  </property>
                 </widget>
                </item>
@@ -191,7 +155,7 @@
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QTextEdit" name="textEdit">
+                <widget class="QTextEdit" name="p_parameters_length_used_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -200,21 +164,18 @@
                  </property>
                 </widget>
                </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="label_4">
+               <item row="9" column="1">
+                <widget class="QTextEdit" name="p_parameters_desiredReturnTime_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
                    <height>40</height>
                   </size>
-                 </property>
-                 <property name="text">
-                  <string>Estimated printing time (minutes): </string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QComboBox" name="comboBox">
+                <widget class="QComboBox" name="p_parameters_filament_comboBox">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -231,21 +192,19 @@
                    <string>ABS</string>
                   </property>
                  </item>
-                 <item>
-                  <property name="text">
-                   <string>Nylon</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>PETG</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>ASA</string>
-                  </property>
-                 </item>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Desired return time (months):</string>
+                 </property>
                 </widget>
                </item>
                <item row="1" column="0">
@@ -294,7 +253,7 @@
                 </widget>
                </item>
                <item row="5" column="1">
-                <widget class="QComboBox" name="comboBox_2">
+                <widget class="QComboBox" name="p_parameters_3dprinter_name_profile_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -318,7 +277,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Return on investment costs</string>
+                  <string>Return on 3D Printer investment</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -348,7 +307,7 @@
                 </widget>
                </item>
                <item row="6" column="3">
-                <widget class="QTextEdit" name="textEdit_5">
+                <widget class="QTextEdit" name="p_parameters_3dPrinterConsumption_profile_value">
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
@@ -370,18 +329,126 @@
                  </property>
                 </widget>
                </item>
+               <item row="7" column="2">
+                <widget class="QLabel" name="label_14">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>3D Printer Value:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="3">
+                <widget class="QTextEdit" name="p_parameters_3dprinterValue_profile_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QLabel" name="label_15">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Hours per day:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QTextEdit" name="p_parameters_workHoursDay_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0">
+                <widget class="QLabel" name="label_16">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Days per Month:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1">
+                <widget class="QTextEdit" name="p_parameters_workDaysMonth_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="2">
+                <widget class="QLabel" name="label_12">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Fixed costs per print:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="3">
+                <widget class="QTextEdit" name="p_parameters_fixedCosts_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLabel" name="label_4">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Estimated printing time (minutes): </string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QTextEdit" name="p_parameters_estimated_print_time_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
            </layout>
           </widget>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="text">
-           <string>Clear Parameters</string>
-          </property>
          </widget>
         </item>
        </layout>
@@ -390,6 +457,285 @@
        <attribute name="title">
         <string>Results</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>705</width>
+             <height>389</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QFrame" name="frame_4">
+              <property name="frameShape">
+               <enum>QFrame::Shape::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_21">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Energy:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="p_results_failure_cost_label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="p_results_material_cost_label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="4">
+                <widget class="QLabel" name="label_17">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Production costs</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLabel" name="p_results_finishing_cost_label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_23">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Maitenance:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLabel" name="label_22">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Finishing (10%):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="label_20">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Failure:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="p_results_maitenance_cost_label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Material:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="p_results_energy_cost_label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QFrame" name="frame_6">
+              <property name="frameShape">
+               <enum>QFrame::Shape::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_30">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_29">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Value for Production:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_31">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Value for Sale:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="label_32">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QFrame" name="frame_5">
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="p_results_profit_percentage_value">
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="singleStep">
+              <number>5</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Profit percentage:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="history_tab">
        <attribute name="title">
@@ -408,21 +754,28 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="p_parameters_calculateResults_pushButton">
          <property name="text">
           <string>Calculate Results</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="p_parameters_clearParameters_pushButton">
+         <property name="text">
+          <string>Clear Parameters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="p_parameters_generateReport_pushButton">
          <property name="text">
           <string>Generate Report</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="p_parameters_saveResults_pushButton">
          <property name="text">
           <string>Save Results</string>
          </property>
