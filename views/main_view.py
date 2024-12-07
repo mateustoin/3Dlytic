@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_viewncbOoB.ui'
+## Form generated from reading UI file 'main_viewaqwjYn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -132,15 +132,20 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.pushButton_5 = QPushButton(self.frame_3)
-        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.p_parameters_3dprinter_add_profile_pushButton = QPushButton(self.frame_3)
+        self.p_parameters_3dprinter_add_profile_pushButton.setObjectName(u"p_parameters_3dprinter_add_profile_pushButton")
 
-        self.horizontalLayout_2.addWidget(self.pushButton_5)
+        self.horizontalLayout_2.addWidget(self.p_parameters_3dprinter_add_profile_pushButton)
 
-        self.pushButton_6 = QPushButton(self.frame_3)
-        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.p_parameters_3dprinter_save_profile_pushButton = QPushButton(self.frame_3)
+        self.p_parameters_3dprinter_save_profile_pushButton.setObjectName(u"p_parameters_3dprinter_save_profile_pushButton")
 
-        self.horizontalLayout_2.addWidget(self.pushButton_6)
+        self.horizontalLayout_2.addWidget(self.p_parameters_3dprinter_save_profile_pushButton)
+
+        self.p_parameters_3dprinter_delete_profile_pushButton = QPushButton(self.frame_3)
+        self.p_parameters_3dprinter_delete_profile_pushButton.setObjectName(u"p_parameters_3dprinter_delete_profile_pushButton")
+
+        self.horizontalLayout_2.addWidget(self.p_parameters_3dprinter_delete_profile_pushButton)
 
 
         self.gridLayout_2.addWidget(self.frame_3, 5, 2, 1, 2)
@@ -441,25 +446,25 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout = QHBoxLayout(self.frame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.p_parameters_calculateResults_pushButton = QPushButton(self.frame)
-        self.p_parameters_calculateResults_pushButton.setObjectName(u"p_parameters_calculateResults_pushButton")
+        self.p_main_calculate_results_pushButton = QPushButton(self.frame)
+        self.p_main_calculate_results_pushButton.setObjectName(u"p_main_calculate_results_pushButton")
 
-        self.horizontalLayout.addWidget(self.p_parameters_calculateResults_pushButton)
+        self.horizontalLayout.addWidget(self.p_main_calculate_results_pushButton)
 
-        self.p_parameters_clearParameters_pushButton = QPushButton(self.frame)
-        self.p_parameters_clearParameters_pushButton.setObjectName(u"p_parameters_clearParameters_pushButton")
+        self.p_main_clear_parameters_pushButton = QPushButton(self.frame)
+        self.p_main_clear_parameters_pushButton.setObjectName(u"p_main_clear_parameters_pushButton")
 
-        self.horizontalLayout.addWidget(self.p_parameters_clearParameters_pushButton)
+        self.horizontalLayout.addWidget(self.p_main_clear_parameters_pushButton)
 
-        self.p_parameters_generateReport_pushButton = QPushButton(self.frame)
-        self.p_parameters_generateReport_pushButton.setObjectName(u"p_parameters_generateReport_pushButton")
+        self.p_main_generate_report_pushButton = QPushButton(self.frame)
+        self.p_main_generate_report_pushButton.setObjectName(u"p_main_generate_report_pushButton")
 
-        self.horizontalLayout.addWidget(self.p_parameters_generateReport_pushButton)
+        self.horizontalLayout.addWidget(self.p_main_generate_report_pushButton)
 
-        self.p_parameters_saveResults_pushButton = QPushButton(self.frame)
-        self.p_parameters_saveResults_pushButton.setObjectName(u"p_parameters_saveResults_pushButton")
+        self.p_main_save_results_pushButton = QPushButton(self.frame)
+        self.p_main_save_results_pushButton.setObjectName(u"p_main_save_results_pushButton")
 
-        self.horizontalLayout.addWidget(self.p_parameters_saveResults_pushButton)
+        self.horizontalLayout.addWidget(self.p_main_save_results_pushButton)
 
 
         self.verticalLayout.addWidget(self.frame)
@@ -509,8 +514,9 @@ class Ui_MainWindow(object):
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Printer Costs", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Price per KWh", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Desired return time (months):", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Add Profile", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Delete Profile", None))
+        self.p_parameters_3dprinter_add_profile_pushButton.setText(QCoreApplication.translate("MainWindow", u"Add Profile", None))
+        self.p_parameters_3dprinter_save_profile_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Profile", None))
+        self.p_parameters_3dprinter_delete_profile_pushButton.setText(QCoreApplication.translate("MainWindow", u"Delete Profile", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Return on 3D Printer investment", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"3D Printer Value:", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hours per day:", None))
@@ -543,10 +549,10 @@ class Ui_MainWindow(object):
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"Profit percentage:", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.results_tab), QCoreApplication.translate("MainWindow", u"Results", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.history_tab), QCoreApplication.translate("MainWindow", u"History", None))
-        self.p_parameters_calculateResults_pushButton.setText(QCoreApplication.translate("MainWindow", u"Calculate Results", None))
-        self.p_parameters_clearParameters_pushButton.setText(QCoreApplication.translate("MainWindow", u"Clear Parameters", None))
-        self.p_parameters_generateReport_pushButton.setText(QCoreApplication.translate("MainWindow", u"Generate Report", None))
-        self.p_parameters_saveResults_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Results", None))
+        self.p_main_calculate_results_pushButton.setText(QCoreApplication.translate("MainWindow", u"Calculate Results", None))
+        self.p_main_clear_parameters_pushButton.setText(QCoreApplication.translate("MainWindow", u"Clear Parameters", None))
+        self.p_main_generate_report_pushButton.setText(QCoreApplication.translate("MainWindow", u"Generate Report", None))
+        self.p_main_save_results_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Results", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menu_Parameters.setTitle(QCoreApplication.translate("MainWindow", u"&Parameters", None))
         self.menu_Currency.setTitle(QCoreApplication.translate("MainWindow", u"&Currency", None))
