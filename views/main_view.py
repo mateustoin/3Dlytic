@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_view.ui'
+## Form generated from reading UI file 'main_viewncbOoB.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.0
+## Created by: Qt User Interface Compiler version 6.5.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -17,11 +17,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QScrollArea,
-    QSizePolicy, QSpinBox, QStatusBar, QTabWidget,
-    QTableWidget, QTableWidgetItem, QTextEdit, QVBoxLayout,
-    QWidget)
+    QHBoxLayout, QLabel, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QScrollArea, QSizePolicy,
+    QSpinBox, QStatusBar, QTabWidget, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -32,7 +31,13 @@ class Ui_MainWindow(object):
         self.actionNew_File.setObjectName(u"actionNew_File")
         self.actionExit = QAction(MainWindow)
         self.actionExit.setObjectName(u"actionExit")
-        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ApplicationExit))
+        icon = QIcon()
+        iconThemeName = u"QIcon::ThemeIcon::ApplicationExit"
+        if QIcon.hasThemeIcon(iconThemeName):
+            icon = QIcon.fromTheme(iconThemeName)
+        else:
+            icon.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
+
         self.actionExit.setIcon(icon)
         self.actionBRL = QAction(MainWindow)
         self.actionBRL.setObjectName(u"actionBRL")
@@ -55,13 +60,12 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 705, 438))
-        self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 705, 440))
+        self.gridLayout_8 = QGridLayout(self.scrollAreaWidgetContents)
+        self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.frame_2 = QFrame(self.scrollAreaWidgetContents)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.frame_2.setFrameShape(QFrame.NoFrame)
         self.gridLayout_2 = QGridLayout(self.frame_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.label_10 = QLabel(self.frame_2)
@@ -70,34 +74,22 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_10, 7, 0, 1, 1)
 
-        self.textEdit_3 = QTextEdit(self.frame_2)
-        self.textEdit_3.setObjectName(u"textEdit_3")
-        self.textEdit_3.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.textEdit_3, 1, 3, 1, 1)
-
-        self.label_3 = QLabel(self.frame_2)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.label_3, 1, 2, 1, 1)
-
         self.label_11 = QLabel(self.frame_2)
         self.label_11.setObjectName(u"label_11")
 
         self.gridLayout_2.addWidget(self.label_11, 5, 0, 1, 1)
 
-        self.textEdit_6 = QTextEdit(self.frame_2)
-        self.textEdit_6.setObjectName(u"textEdit_6")
-        self.textEdit_6.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_avrFailRate_profile_value = QTextEdit(self.frame_2)
+        self.p_parameters_avrFailRate_profile_value.setObjectName(u"p_parameters_avrFailRate_profile_value")
+        self.p_parameters_avrFailRate_profile_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_6, 7, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_avrFailRate_profile_value, 7, 1, 1, 1)
 
-        self.textEdit_4 = QTextEdit(self.frame_2)
-        self.textEdit_4.setObjectName(u"textEdit_4")
-        self.textEdit_4.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_pricePerKwh_profile_value = QTextEdit(self.frame_2)
+        self.p_parameters_pricePerKwh_profile_value.setObjectName(u"p_parameters_pricePerKwh_profile_value")
+        self.p_parameters_pricePerKwh_profile_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_4, 6, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_pricePerKwh_profile_value, 6, 1, 1, 1)
 
         self.label_9 = QLabel(self.frame_2)
         self.label_9.setObjectName(u"label_9")
@@ -107,11 +99,12 @@ class Ui_MainWindow(object):
 
         self.label_7 = QLabel(self.frame_2)
         self.label_7.setObjectName(u"label_7")
+        self.label_7.setMaximumSize(QSize(16777215, 40))
         font = QFont()
         font.setPointSize(12)
         font.setBold(True)
         self.label_7.setFont(font)
-        self.label_7.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_7.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.label_7, 4, 0, 1, 4)
 
@@ -121,25 +114,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_8, 6, 0, 1, 1)
 
-        self.textEdit = QTextEdit(self.frame_2)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_desiredReturnTime_value = QTextEdit(self.frame_2)
+        self.p_parameters_desiredReturnTime_value.setObjectName(u"p_parameters_desiredReturnTime_value")
+        self.p_parameters_desiredReturnTime_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit, 2, 1, 1, 1)
-
-        self.textEdit_8 = QTextEdit(self.frame_2)
-        self.textEdit_8.setObjectName(u"textEdit_8")
-        self.textEdit_8.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.textEdit_8, 9, 1, 1, 1)
-
-        self.comboBox = QComboBox(self.frame_2)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.comboBox, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_desiredReturnTime_value, 9, 1, 1, 1)
 
         self.label_13 = QLabel(self.frame_2)
         self.label_13.setObjectName(u"label_13")
@@ -147,17 +126,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_13, 9, 0, 1, 1)
 
-        self.label = QLabel(self.frame_2)
-        self.label.setObjectName(u"label")
-        self.label.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.label, 1, 0, 1, 1)
-
         self.frame_3 = QFrame(self.frame_2)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMaximumSize(QSize(16777215, 80))
-        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.frame_3.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.pushButton_5 = QPushButton(self.frame_3)
@@ -173,39 +145,25 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.frame_3, 5, 2, 1, 2)
 
-        self.comboBox_2 = QComboBox(self.frame_2)
-        self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_3dprinter_name_profile_value = QComboBox(self.frame_2)
+        self.p_parameters_3dprinter_name_profile_value.setObjectName(u"p_parameters_3dprinter_name_profile_value")
+        self.p_parameters_3dprinter_name_profile_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.comboBox_2, 5, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_3dprinter_name_profile_value, 5, 1, 1, 1)
 
         self.label_6 = QLabel(self.frame_2)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setMaximumSize(QSize(16777215, 40))
         self.label_6.setFont(font)
-        self.label_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_6.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.label_6, 8, 0, 1, 4)
 
-        self.label_5 = QLabel(self.frame_2)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setMaximumSize(QSize(16777215, 40))
-        self.label_5.setFont(font)
-        self.label_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.p_parameters_3dPrinterConsumption_profile_value = QTextEdit(self.frame_2)
+        self.p_parameters_3dPrinterConsumption_profile_value.setObjectName(u"p_parameters_3dPrinterConsumption_profile_value")
+        self.p_parameters_3dPrinterConsumption_profile_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.label_5, 0, 0, 1, 4)
-
-        self.textEdit_5 = QTextEdit(self.frame_2)
-        self.textEdit_5.setObjectName(u"textEdit_5")
-        self.textEdit_5.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.textEdit_5, 6, 3, 1, 1)
-
-        self.label_2 = QLabel(self.frame_2)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setMaximumSize(QSize(16777215, 40))
-
-        self.gridLayout_2.addWidget(self.label_2, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_3dPrinterConsumption_profile_value, 6, 3, 1, 1)
 
         self.label_14 = QLabel(self.frame_2)
         self.label_14.setObjectName(u"label_14")
@@ -213,11 +171,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_14, 7, 2, 1, 1)
 
-        self.textEdit_10 = QTextEdit(self.frame_2)
-        self.textEdit_10.setObjectName(u"textEdit_10")
-        self.textEdit_10.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_3dprinterValue_profile_value = QTextEdit(self.frame_2)
+        self.p_parameters_3dprinterValue_profile_value.setObjectName(u"p_parameters_3dprinterValue_profile_value")
+        self.p_parameters_3dprinterValue_profile_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_10, 7, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_3dprinterValue_profile_value, 7, 3, 1, 1)
 
         self.label_15 = QLabel(self.frame_2)
         self.label_15.setObjectName(u"label_15")
@@ -225,11 +183,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_15, 9, 2, 1, 1)
 
-        self.textEdit_9 = QTextEdit(self.frame_2)
-        self.textEdit_9.setObjectName(u"textEdit_9")
-        self.textEdit_9.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_workHoursDay_value = QTextEdit(self.frame_2)
+        self.p_parameters_workHoursDay_value.setObjectName(u"p_parameters_workHoursDay_value")
+        self.p_parameters_workHoursDay_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_9, 9, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_workHoursDay_value, 9, 3, 1, 1)
 
         self.label_16 = QLabel(self.frame_2)
         self.label_16.setObjectName(u"label_16")
@@ -237,11 +195,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_16, 10, 0, 1, 1)
 
-        self.textEdit_11 = QTextEdit(self.frame_2)
-        self.textEdit_11.setObjectName(u"textEdit_11")
-        self.textEdit_11.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_workDaysMonth_value = QTextEdit(self.frame_2)
+        self.p_parameters_workDaysMonth_value.setObjectName(u"p_parameters_workDaysMonth_value")
+        self.p_parameters_workDaysMonth_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_11, 10, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_workDaysMonth_value, 10, 1, 1, 1)
 
         self.label_12 = QLabel(self.frame_2)
         self.label_12.setObjectName(u"label_12")
@@ -249,11 +207,29 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_12, 10, 2, 1, 1)
 
-        self.textEdit_7 = QTextEdit(self.frame_2)
-        self.textEdit_7.setObjectName(u"textEdit_7")
-        self.textEdit_7.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_fixedCosts_value = QTextEdit(self.frame_2)
+        self.p_parameters_fixedCosts_value.setObjectName(u"p_parameters_fixedCosts_value")
+        self.p_parameters_fixedCosts_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_7, 10, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_fixedCosts_value, 10, 3, 1, 1)
+
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.label_2, 2, 0, 1, 1)
+
+        self.p_parameters_length_used_value = QTextEdit(self.frame_2)
+        self.p_parameters_length_used_value.setObjectName(u"p_parameters_length_used_value")
+        self.p_parameters_length_used_value.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.p_parameters_length_used_value, 2, 1, 1, 1)
+
+        self.label_3 = QLabel(self.frame_2)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.label_3, 1, 2, 1, 1)
 
         self.label_4 = QLabel(self.frame_2)
         self.label_4.setObjectName(u"label_4")
@@ -261,14 +237,42 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_4, 2, 2, 1, 1)
 
-        self.textEdit_2 = QTextEdit(self.frame_2)
-        self.textEdit_2.setObjectName(u"textEdit_2")
-        self.textEdit_2.setMaximumSize(QSize(16777215, 40))
+        self.p_parameters_filament_price_value = QTextEdit(self.frame_2)
+        self.p_parameters_filament_price_value.setObjectName(u"p_parameters_filament_price_value")
+        self.p_parameters_filament_price_value.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_2.addWidget(self.textEdit_2, 2, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.p_parameters_filament_price_value, 1, 3, 1, 1)
+
+        self.p_parameters_estimated_print_time_value = QTextEdit(self.frame_2)
+        self.p_parameters_estimated_print_time_value.setObjectName(u"p_parameters_estimated_print_time_value")
+        self.p_parameters_estimated_print_time_value.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.p_parameters_estimated_print_time_value, 2, 3, 1, 1)
+
+        self.p_parameters_filament_comboBox = QComboBox(self.frame_2)
+        self.p_parameters_filament_comboBox.addItem("")
+        self.p_parameters_filament_comboBox.addItem("")
+        self.p_parameters_filament_comboBox.setObjectName(u"p_parameters_filament_comboBox")
+        self.p_parameters_filament_comboBox.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.p_parameters_filament_comboBox, 1, 1, 1, 1)
+
+        self.label = QLabel(self.frame_2)
+        self.label.setObjectName(u"label")
+        self.label.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_2.addWidget(self.label, 1, 0, 1, 1)
+
+        self.label_5 = QLabel(self.frame_2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(16777215, 40))
+        self.label_5.setFont(font)
+        self.label_5.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.label_5, 0, 0, 1, 4)
 
 
-        self.verticalLayout_2.addWidget(self.frame_2)
+        self.gridLayout_8.addWidget(self.frame_2, 0, 0, 1, 1)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
@@ -284,46 +288,121 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 705, 389))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 705, 393))
         self.gridLayout_4 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.frame_4 = QFrame(self.scrollAreaWidgetContents_2)
         self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.frame_4.setFrameShape(QFrame.NoFrame)
         self.gridLayout_6 = QGridLayout(self.frame_4)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.label_21 = QLabel(self.frame_4)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.label_21, 2, 0, 1, 1)
+
+        self.p_results_failure_cost_label = QLabel(self.frame_4)
+        self.p_results_failure_cost_label.setObjectName(u"p_results_failure_cost_label")
+        self.p_results_failure_cost_label.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.p_results_failure_cost_label, 1, 3, 1, 1)
+
+        self.p_results_material_cost_label = QLabel(self.frame_4)
+        self.p_results_material_cost_label.setObjectName(u"p_results_material_cost_label")
+        self.p_results_material_cost_label.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.p_results_material_cost_label, 1, 1, 1, 1)
+
         self.label_17 = QLabel(self.frame_4)
         self.label_17.setObjectName(u"label_17")
         self.label_17.setMaximumSize(QSize(16777215, 40))
         self.label_17.setFont(font)
-        self.label_17.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_17.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout_6.addWidget(self.label_17, 0, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.label_17, 0, 0, 1, 4)
 
-        self.tableWidget = QTableWidget(self.frame_4)
-        if (self.tableWidget.columnCount() < 1):
-            self.tableWidget.setColumnCount(1)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        if (self.tableWidget.rowCount() < 5):
-            self.tableWidget.setRowCount(5)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem5)
-        self.tableWidget.setObjectName(u"tableWidget")
+        self.p_results_finishing_cost_label = QLabel(self.frame_4)
+        self.p_results_finishing_cost_label.setObjectName(u"p_results_finishing_cost_label")
+        self.p_results_finishing_cost_label.setMaximumSize(QSize(16777215, 40))
 
-        self.gridLayout_6.addWidget(self.tableWidget, 1, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.p_results_finishing_cost_label, 2, 3, 1, 1)
+
+        self.label_23 = QLabel(self.frame_4)
+        self.label_23.setObjectName(u"label_23")
+        self.label_23.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.label_23, 3, 0, 1, 1)
+
+        self.label_22 = QLabel(self.frame_4)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.label_22, 2, 2, 1, 1)
+
+        self.label_20 = QLabel(self.frame_4)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.label_20, 1, 2, 1, 1)
+
+        self.p_results_maitenance_cost_label = QLabel(self.frame_4)
+        self.p_results_maitenance_cost_label.setObjectName(u"p_results_maitenance_cost_label")
+        self.p_results_maitenance_cost_label.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.p_results_maitenance_cost_label, 3, 1, 1, 1)
+
+        self.label_19 = QLabel(self.frame_4)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.label_19, 1, 0, 1, 1)
+
+        self.p_results_energy_cost_label = QLabel(self.frame_4)
+        self.p_results_energy_cost_label.setObjectName(u"p_results_energy_cost_label")
+        self.p_results_energy_cost_label.setMaximumSize(QSize(16777215, 40))
+
+        self.gridLayout_6.addWidget(self.p_results_energy_cost_label, 2, 1, 1, 1)
 
 
         self.gridLayout_4.addWidget(self.frame_4, 0, 0, 1, 1)
+
+        self.frame_6 = QFrame(self.scrollAreaWidgetContents_2)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setFrameShape(QFrame.NoFrame)
+        self.gridLayout_7 = QGridLayout(self.frame_6)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.label_30 = QLabel(self.frame_6)
+        self.label_30.setObjectName(u"label_30")
+        font1 = QFont()
+        font1.setPointSize(14)
+        self.label_30.setFont(font1)
+
+        self.gridLayout_7.addWidget(self.label_30, 0, 1, 1, 1)
+
+        self.label_29 = QLabel(self.frame_6)
+        self.label_29.setObjectName(u"label_29")
+        font2 = QFont()
+        font2.setPointSize(14)
+        font2.setBold(True)
+        self.label_29.setFont(font2)
+
+        self.gridLayout_7.addWidget(self.label_29, 0, 0, 1, 1)
+
+        self.label_31 = QLabel(self.frame_6)
+        self.label_31.setObjectName(u"label_31")
+        self.label_31.setFont(font2)
+
+        self.gridLayout_7.addWidget(self.label_31, 1, 0, 1, 1)
+
+        self.label_32 = QLabel(self.frame_6)
+        self.label_32.setObjectName(u"label_32")
+        self.label_32.setFont(font1)
+
+        self.gridLayout_7.addWidget(self.label_32, 1, 1, 1, 1)
+
+
+        self.gridLayout_4.addWidget(self.frame_6, 1, 0, 1, 1)
 
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
 
@@ -331,17 +410,16 @@ class Ui_MainWindow(object):
 
         self.frame_5 = QFrame(self.results_tab)
         self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Shadow.Raised)
+        self.frame_5.setFrameShape(QFrame.NoFrame)
         self.gridLayout_5 = QGridLayout(self.frame_5)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.spinBox = QSpinBox(self.frame_5)
-        self.spinBox.setObjectName(u"spinBox")
-        self.spinBox.setMaximum(1000)
-        self.spinBox.setSingleStep(5)
-        self.spinBox.setValue(100)
+        self.p_results_profit_percentage_value = QSpinBox(self.frame_5)
+        self.p_results_profit_percentage_value.setObjectName(u"p_results_profit_percentage_value")
+        self.p_results_profit_percentage_value.setMaximum(1000)
+        self.p_results_profit_percentage_value.setSingleStep(5)
+        self.p_results_profit_percentage_value.setValue(100)
 
-        self.gridLayout_5.addWidget(self.spinBox, 0, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.p_results_profit_percentage_value, 0, 1, 1, 1)
 
         self.label_18 = QLabel(self.frame_5)
         self.label_18.setObjectName(u"label_18")
@@ -360,29 +438,28 @@ class Ui_MainWindow(object):
 
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.frame.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout = QHBoxLayout(self.frame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
+        self.p_parameters_calculateResults_pushButton = QPushButton(self.frame)
+        self.p_parameters_calculateResults_pushButton.setObjectName(u"p_parameters_calculateResults_pushButton")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.p_parameters_calculateResults_pushButton)
 
-        self.pushButton_4 = QPushButton(self.frame)
-        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.p_parameters_clearParameters_pushButton = QPushButton(self.frame)
+        self.p_parameters_clearParameters_pushButton.setObjectName(u"p_parameters_clearParameters_pushButton")
 
-        self.horizontalLayout.addWidget(self.pushButton_4)
+        self.horizontalLayout.addWidget(self.p_parameters_clearParameters_pushButton)
 
-        self.pushButton_2 = QPushButton(self.frame)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.p_parameters_generateReport_pushButton = QPushButton(self.frame)
+        self.p_parameters_generateReport_pushButton.setObjectName(u"p_parameters_generateReport_pushButton")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.p_parameters_generateReport_pushButton)
 
-        self.pushButton_3 = QPushButton(self.frame)
-        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.p_parameters_saveResults_pushButton = QPushButton(self.frame)
+        self.p_parameters_saveResults_pushButton.setObjectName(u"p_parameters_saveResults_pushButton")
 
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.horizontalLayout.addWidget(self.p_parameters_saveResults_pushButton)
 
 
         self.verticalLayout.addWidget(self.frame)
@@ -413,7 +490,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.actionExit.triggered.connect(MainWindow.close)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -427,47 +504,49 @@ class Ui_MainWindow(object):
         self.actionUSD.setText(QCoreApplication.translate("MainWindow", u"USD ($)", None))
         self.actionFilament.setText(QCoreApplication.translate("MainWindow", u"Filament", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Average failure rate (%)", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Filament Price (per Kg):", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"3D Printer", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"3D Printer Consumption (W): ", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Production Costs", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Printer Costs", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Price per KWh", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"PLA", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"ABS", None))
-
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Desired return time (months):", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Filament type:", None))
         self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Add Profile", None))
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Delete Profile", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Return on 3D Printer investment", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Filament Costs", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Length used (meters): ", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"3D Printer Value:", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hours per day:", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Days per Month:", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Fixed costs per print:", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Length used (meters): ", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Filament Price (per Kg):", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Estimated printing time (minutes): ", None))
+        self.p_parameters_filament_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"PLA", None))
+        self.p_parameters_filament_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"ABS", None))
+
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Filament type:", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Filament Costs", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.parameters_tab), QCoreApplication.translate("MainWindow", u"Parameters", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Energy:", None))
+        self.p_results_failure_cost_label.setText("")
+        self.p_results_material_cost_label.setText("")
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Production costs", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Production Costs", None));
-        ___qtablewidgetitem1 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Material", None));
-        ___qtablewidgetitem2 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Energy", None));
-        ___qtablewidgetitem3 = self.tableWidget.verticalHeaderItem(2)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Maitenance", None));
-        ___qtablewidgetitem4 = self.tableWidget.verticalHeaderItem(3)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Failure", None));
-        ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(4)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Finishing (10%)", None));
+        self.p_results_finishing_cost_label.setText("")
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"Maitenance:", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Finishing (10%):", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Failure:", None))
+        self.p_results_maitenance_cost_label.setText("")
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Material:", None))
+        self.p_results_energy_cost_label.setText("")
+        self.label_30.setText("")
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"Value for Production:", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"Value for Sale:", None))
+        self.label_32.setText("")
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"Profit percentage:", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.results_tab), QCoreApplication.translate("MainWindow", u"Results", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.history_tab), QCoreApplication.translate("MainWindow", u"History", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Calculate Results", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Clear Parameters", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Generate Report", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Save Results", None))
+        self.p_parameters_calculateResults_pushButton.setText(QCoreApplication.translate("MainWindow", u"Calculate Results", None))
+        self.p_parameters_clearParameters_pushButton.setText(QCoreApplication.translate("MainWindow", u"Clear Parameters", None))
+        self.p_parameters_generateReport_pushButton.setText(QCoreApplication.translate("MainWindow", u"Generate Report", None))
+        self.p_parameters_saveResults_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Results", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menu_Parameters.setTitle(QCoreApplication.translate("MainWindow", u"&Parameters", None))
         self.menu_Currency.setTitle(QCoreApplication.translate("MainWindow", u"&Currency", None))

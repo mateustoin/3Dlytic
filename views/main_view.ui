@@ -36,17 +36,14 @@
              <x>0</x>
              <y>0</y>
              <width>705</width>
-             <height>438</height>
+             <height>440</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
-            <item>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="0">
              <widget class="QFrame" name="frame_2">
               <property name="frameShape">
-               <enum>QFrame::Shape::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Shadow::Raised</enum>
+               <enum>QFrame::NoFrame</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_2">
                <item row="7" column="0">
@@ -59,29 +56,6 @@
                  </property>
                  <property name="text">
                   <string>Average failure rate (%)</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="3">
-                <widget class="QTextEdit" name="p_parameters_filament_price_value">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="2">
-                <widget class="QLabel" name="label_3">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Filament Price (per Kg):</string>
                  </property>
                 </widget>
                </item>
@@ -127,6 +101,12 @@
                </item>
                <item row="4" column="0" colspan="4">
                 <widget class="QLabel" name="label_7">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -134,10 +114,10 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Production Costs</string>
+                  <string>Printer Costs</string>
                  </property>
                  <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -154,16 +134,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="2" column="1">
-                <widget class="QTextEdit" name="p_parameters_length_used_value">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
                <item row="9" column="1">
                 <widget class="QTextEdit" name="p_parameters_desiredReturnTime_value">
                  <property name="maximumSize">
@@ -172,26 +142,6 @@
                    <height>40</height>
                   </size>
                  </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QComboBox" name="p_parameters_filament_comboBox">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>PLA</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>ABS</string>
-                  </property>
-                 </item>
                 </widget>
                </item>
                <item row="9" column="0">
@@ -207,19 +157,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Filament type:</string>
-                 </property>
-                </widget>
-               </item>
                <item row="5" column="2" colspan="2">
                 <widget class="QFrame" name="frame_3">
                  <property name="maximumSize">
@@ -229,10 +166,7 @@
                   </size>
                  </property>
                  <property name="frameShape">
-                  <enum>QFrame::Shape::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Shadow::Raised</enum>
+                  <enum>QFrame::NoFrame</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_2">
                   <item>
@@ -280,29 +214,7 @@
                   <string>Return on 3D Printer investment</string>
                  </property>
                  <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0" colspan="4">
-                <widget class="QLabel" name="label_5">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>12</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Filament Costs</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -313,19 +225,6 @@
                    <width>16777215</width>
                    <height>40</height>
                   </size>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QLabel" name="label_2">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Length used (meters): </string>
                  </property>
                 </widget>
                </item>
@@ -421,6 +320,42 @@
                  </property>
                 </widget>
                </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Length used (meters): </string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QTextEdit" name="p_parameters_length_used_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="label_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Filament Price (per Kg):</string>
+                 </property>
+                </widget>
+               </item>
                <item row="2" column="2">
                 <widget class="QLabel" name="label_4">
                  <property name="maximumSize">
@@ -434,6 +369,16 @@
                  </property>
                 </widget>
                </item>
+               <item row="1" column="3">
+                <widget class="QTextEdit" name="p_parameters_filament_price_value">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
                <item row="2" column="3">
                 <widget class="QTextEdit" name="p_parameters_estimated_print_time_value">
                  <property name="maximumSize">
@@ -441,6 +386,61 @@
                    <width>16777215</width>
                    <height>40</height>
                   </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="p_parameters_filament_comboBox">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>PLA</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ABS</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Filament type:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="4">
+                <widget class="QLabel" name="label_5">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Filament Costs</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -469,17 +469,14 @@
              <x>0</x>
              <y>0</y>
              <width>705</width>
-             <height>389</height>
+             <height>393</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_4">
             <item row="0" column="0">
              <widget class="QFrame" name="frame_4">
               <property name="frameShape">
-               <enum>QFrame::Shape::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Shadow::Raised</enum>
+               <enum>QFrame::NoFrame</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
                <item row="2" column="0">
@@ -539,7 +536,7 @@
                   <string>Production costs</string>
                  </property>
                  <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -640,10 +637,7 @@
             <item row="1" column="0">
              <widget class="QFrame" name="frame_6">
               <property name="frameShape">
-               <enum>QFrame::Shape::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Shadow::Raised</enum>
+               <enum>QFrame::NoFrame</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_7">
                <item row="0" column="1">
@@ -706,10 +700,7 @@
         <item row="1" column="0">
          <widget class="QFrame" name="frame_5">
           <property name="frameShape">
-           <enum>QFrame::Shape::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Shadow::Raised</enum>
+           <enum>QFrame::NoFrame</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_5">
            <item row="0" column="1">
@@ -747,10 +738,7 @@
     <item>
      <widget class="QFrame" name="frame">
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -826,7 +814,8 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::ApplicationExit"/>
+    <iconset theme="QIcon::ThemeIcon::ApplicationExit">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Exit</string>
