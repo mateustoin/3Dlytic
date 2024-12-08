@@ -28,7 +28,7 @@ def main():
 
     # Load and apply the stylesheet
     stylesheet = load_stylesheet()
-    app.setStyleSheet(stylesheet)
+    #app.setStyleSheet(stylesheet)
 
     controller = MainController()
     controller.show()

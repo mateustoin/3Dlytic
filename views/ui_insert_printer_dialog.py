@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'insert_printer_dialog.ui'
+## Form generated from reading UI file 'insert_printer_dialogiRqfCc.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.0
+## Created by: Qt User Interface Compiler version 6.5.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -32,6 +32,7 @@ class Ui_Form(object):
 
         self.p_printer_dialog_input_plainTextEdit = QPlainTextEdit(Form)
         self.p_printer_dialog_input_plainTextEdit.setObjectName(u"p_printer_dialog_input_plainTextEdit")
+        self.p_printer_dialog_input_plainTextEdit.setMaximumSize(QSize(16777215, 40))
 
         self.gridLayout.addWidget(self.p_printer_dialog_input_plainTextEdit, 0, 1, 1, 1)
 
