@@ -8,8 +8,12 @@ class PrinterController:
         self.ui = ui
         self.dialog = PrinterDialogWindow()
         self.printer_model = PrinterData()
+        self.current_printer_profile_name_selected = ""
 
-        # Connect buttons to methods
+        self.update_printer_profile_list()
+
+        # Connections to methods
+        # Buttons
         self.ui.p_parameters_3dprinter_add_profile_pushButton.clicked.connect(
             self.on_add_printer_button_clicked
         )
@@ -22,6 +26,11 @@ class PrinterController:
         #self.ui.p_parameters_3dprinter_delete_profile_pushButton.clicked.connect(
             # self.on_delete_button_click
         # )
+        
+        # Events
+        self.ui.p_parameters_3dprinter_name_profile_value.currentTextChanged.connect(
+            self.update_printer_profile_ui_information
+        )
 
     # Show Ui_Form on button click
     def on_add_printer_button_clicked(self):
@@ -32,19 +41,26 @@ class PrinterController:
         print("Dialog accepted!")
         #self.dialog.accept()
         current_printer_name = self.dialog.ui.p_printer_dialog_input_plainTextEdit.toPlainText()
-        #self.ui.p_parameters_3dprinter_name_profile_value.addItem(current_printer_name)
-        self.dialog.close()
-        self.dialog.ui.p_printer_dialog_input_plainTextEdit.clear()
+        printers_list = [self.ui.p_parameters_3dprinter_name_profile_value.itemText(i) 
+                         for i in range(self.ui.p_parameters_3dprinter_name_profile_value.count())]
 
         if (current_printer_name.__len__() == 0):
             SimpleMessages().show_info_message("Error", "Printer must have a name!")
-        # TODO: Check if the printer name already exists
-        elif self.printer_model.get_printers():
+        elif current_printer_name in printers_list:
             SimpleMessages().show_info_message("Error", "Printer name already exists!")
+        elif self.printer_model.check_if_printer_exists(current_printer_name):
+            SimpleMessages().show_info_message("Error", "Printer name already exists on the database!")
         else:
             self.ui.p_parameters_3dprinter_name_profile_value.addItem(current_printer_name)
-            self.dialog.close()
-            self.dialog.ui.p_printer_dialog_input_plainTextEdit.clear()
+            self.clean_ui_information()
+            #self.ui.p_parameters_3dprinter_name_profile_value.setCurrentIndex(self.ui.p_parameters_3dprinter_name_profile_value.count() - 1)
+            current_profile_added = self.generate_printer_info()
+            self.printer_model.add_printer(current_profile_added)
+            self.current_printer_profile_name_selected = current_printer_name
+            self.update_printer_profile_ui_information()
+
+        self.dialog.close()
+        self.dialog.ui.p_printer_dialog_input_plainTextEdit.clear()
 
     def reject_dialog(self):
         print("Dialog rejected!")
@@ -81,9 +97,38 @@ class PrinterController:
             "printer_value": printer_value
         }
 
-        print(printer_info)
-
         return printer_info
+
+    def update_printer_profile_list(self):
+        self.ui.p_parameters_3dprinter_name_profile_value.clear()
+        printer_list = self.printer_model.get_printers()
+        for printer in printer_list:
+            self.ui.p_parameters_3dprinter_name_profile_value.addItem(printer["name"])
+
+        if printer_list.__len__() > 0:
+            self.update_printer_profile_ui_information()
+
+    def update_printer_profile_ui_information(self):
+        printer_info = self.printer_model.get_printer_info(self.ui.p_parameters_3dprinter_name_profile_value.currentText())
+        print(printer_info)
+        self.ui.p_parameters_pricePerKwh_profile_value.setPlainText(printer_info[0]["price_per_kwh"])
+        self.ui.p_parameters_workHoursDay_value.setPlainText(printer_info[0]["hours_per_day"])
+        self.ui.p_parameters_workDaysMonth_value.setPlainText(printer_info[0]["days_per_month"])
+        self.ui.p_parameters_fixedCosts_value.setPlainText(printer_info[0]["fixed_costs_per_print"])
+        self.ui.p_parameters_avrFailRate_profile_value.setPlainText(printer_info[0]["average_failure_rate"])
+        self.ui.p_parameters_desiredReturnTime_value.setPlainText(printer_info[0]["desired_return_time"])
+        self.ui.p_parameters_3dPrinterConsumption_profile_value.setPlainText(printer_info[0]["printer_consumption"])
+        self.ui.p_parameters_3dprinterValue_profile_value.setPlainText(printer_info[0]["printer_value"])
+
+    def clean_ui_information(self):
+        self.ui.p_parameters_pricePerKwh_profile_value.setPlainText("")
+        self.ui.p_parameters_workHoursDay_value.setPlainText("")
+        self.ui.p_parameters_workDaysMonth_value.setPlainText("")
+        self.ui.p_parameters_fixedCosts_value.setPlainText("")
+        self.ui.p_parameters_avrFailRate_profile_value.setPlainText("")
+        self.ui.p_parameters_desiredReturnTime_value.setPlainText("")
+        self.ui.p_parameters_3dPrinterConsumption_profile_value.setPlainText("")
+        self.ui.p_parameters_3dprinterValue_profile_value.setPlainText("")
 
 class PrinterDialogWindow(QDialog):
     def __init__(self):

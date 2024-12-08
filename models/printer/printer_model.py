@@ -14,6 +14,9 @@ class PrinterData:
     def add_printer(self, printer_info):
         self.db.insert(printer_info)
 
+    def upsert_printer(self, printer_info):
+        self.db.upsert(printer_info, Query().name == printer_info["name"])
+
     def get_printers(self):
         return self.db.all()
 
@@ -22,6 +25,12 @@ class PrinterData:
 
     def update_printer(self, printer_id, printer_info):
         self.db.update(printer_info, Query().id == printer_id)
-        
-    def check_if_printer_exists(self, printer_name):
+
+    def get_printer_info(self, printer_name):
         return self.db.search(Query().name == printer_name)
+
+    def check_if_printer_exists(self, printer_name):
+        if self.db.search(Query().name == printer_name) != []:
+            return True
+        else:
+            return False
